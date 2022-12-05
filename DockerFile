@@ -2,4 +2,5 @@ FROM openjdk:8-jdk-alpine
 ARG JAR_FILE=target/*.jar
 COPY target/env-sql.jar env-sql.jar
 ENV TEST_ENV0=fromDockerFile
+EXPOSE 8080
 ENTRYPOINT ["java","-jar","/env-sql.jar"]
